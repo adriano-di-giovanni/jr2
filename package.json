@@ -1,6 +1,6 @@
 {
   "name": "jr2",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "An extremely lightweight JSON-RPC 2.0 compliant client and server for Javascript",
   "main": "lib/jr2.js",
   "module": "es/jr2.js",
@@ -23,7 +23,7 @@
     "format:check": "prettier --list-different '{src,__tests__}/**/*.js'",
     "format": "prettier --write '{src,__tests__}/**/*.js'",
     "lint": "eslint src",
-    "prepare": "npm run clean && npm run format:check && npm run lint && npm test && npm run build",
+    "prepublish": "npm run clean && npm run format:check && npm run lint && npm test && npm run build",
     "test": "cross-env BABEL_ENV=commonjs jest",
     "test:watch": "npm test -- --watch",
     "test:coverage": "npm test -- --coverage",
