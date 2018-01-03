@@ -25,9 +25,9 @@ jr2 works in [any modern browser](http://caniuse.com/#feat=es5) and Node.js.
 ### Client
 
 ```Javascript
-import { Client } from 'jr2'
+import { createClient } from 'jr2'
 
-const client = new Client()
+const client = createClient()
 
 const request = client.request('sum', [23, 42], 1)
 
@@ -37,7 +37,7 @@ console.log(request) // { jsonrpc: '2.0', method: 'sum', params: [23, 42], id: 1
 ### Server
 
 ```javascript
-import { Server } from 'jr2'
+import { createServer } from 'jr2'
 
 const delegate = {
     sum(params, { responseWithResult }, callback) {
@@ -46,7 +46,7 @@ const delegate = {
     },
 }
 
-const server = new Server(delegate)
+const server = createServer(delegate)
 
 const request = {
     jsonrpc: '2.0',
