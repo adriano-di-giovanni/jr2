@@ -29,9 +29,9 @@ import { createClient } from 'jr2'
 
 const client = createClient()
 
-const request = client.request('sum', [23, 42], 1)
+const request = client.request('sum', [1, 2, 4], 1)
 
-console.log(request) // { jsonrpc: '2.0', method: 'sum', params: [23, 42], id: 1 }
+console.log(request) // { jsonrpc: '2.0', method: 'sum', params: [1, 2, 4], id: 1 }
 ```
 
 ### Server
@@ -51,12 +51,12 @@ const server = createServer(delegate)
 const request = {
     jsonrpc: '2.0',
     method: 'sum',
-    params: [23, 42],
+    params: [1, 2, 4],
     id: 1,
 }
 
 server.handle(request, (err, response) => {
-    console.log(response) // { jsonrpc: '2.0', result: -19, id: 1 }
+    console.log(response) // { jsonrpc: '2.0', result: 7, id: 1 }
 })
 ```
 
