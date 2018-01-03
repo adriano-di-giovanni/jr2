@@ -71,5 +71,13 @@
     "rollup-plugin-replace": "^2.0.0",
     "rollup-plugin-uglify": "^2.0.1"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adriano-di-giovanni/jr2.git"
+  },
+  "bugs": {
+    "url": "https://github.com/adriano-di-giovanni/jr2/issues"
+  },
+  "homepage": "https://github.com/adriano-di-giovanni/jr2#readme"
 }
